@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camera Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Platform Script\PlatformSpawner.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/João de Assis/Banana Jump/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
