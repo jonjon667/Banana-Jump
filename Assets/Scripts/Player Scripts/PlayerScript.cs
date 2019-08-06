@@ -26,9 +26,25 @@ public class PlayerScript: MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        Move();
+    }
+
+    void Move()
+    {
+        if (player_Died)
+        {
+            return;
+        }
+        if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            myBody.velocity = new Vector2(moveSpeed, myBody.velocity.y);
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            myBody.velocity = new Vector2(-moveSpeed, myBody.velocity.y);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D target)
@@ -44,6 +60,20 @@ public class PlayerScript: MonoBehaviour
 
                 return;
             }
+            else
+            {
+                myBody.velocity = new Vector2(myBody.velocity.x, extra_push);
+
+                target.gameObject.SetActive(false);
+
+                return;
+            }
+        }
+        else if(target.tag == "NormalPush")
+        {
+            myBody.velocity = new Vector2(myBody.velocity.x, normal_push);
+            target.gameObject.SetActive(false);
+            return;
         }
     } 
 }
