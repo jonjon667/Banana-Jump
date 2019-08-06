@@ -57,7 +57,7 @@ public class PlayerScript: MonoBehaviour
                 myBody.velocity = new Vector2(myBody.velocity.x, 18f);
 
                 target.gameObject.SetActive(false);
-
+                push_count++;
                 return;
             }
             else
@@ -65,15 +65,19 @@ public class PlayerScript: MonoBehaviour
                 myBody.velocity = new Vector2(myBody.velocity.x, extra_push);
 
                 target.gameObject.SetActive(false);
-
-                return;
+                push_count++;
             }
         }
         else if(target.tag == "NormalPush")
         {
             myBody.velocity = new Vector2(myBody.velocity.x, normal_push);
             target.gameObject.SetActive(false);
-            return;
+            push_count++;
+        }
+        if(push_count == 2) // PARA CONTINUAR SPAWNANDO PLATAFORMAS INFINITAMENTE
+        {
+            push_count = 0;
+            PlatformSpawner.instance.SpawnPlatforms();
         }
     } 
 }

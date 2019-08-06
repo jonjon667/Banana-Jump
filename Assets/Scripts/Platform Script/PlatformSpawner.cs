@@ -35,9 +35,9 @@ public class PlatformSpawner : MonoBehaviour
         
     }
 
-    void SpawnPlatforms()
+    public void SpawnPlatforms()
     {
-        Vector2 temp = transform.position;
+        Vector2 temp = Vector2.zero;
         GameObject newPlatform = null;
 
         for(int i = 0; i < spawn_Count; i++)

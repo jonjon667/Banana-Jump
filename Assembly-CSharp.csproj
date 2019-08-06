@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\Platform Script\PlatformScript.cs" />
     <Compile Include="Assets\Scripts\Platform Script\PlatformSpawner.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\SpawneCollector\BGSpawner.cs" />
+    <Compile Include="Assets\Scripts\SpawneCollector\Collector.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/João de Assis/Banana Jump/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
