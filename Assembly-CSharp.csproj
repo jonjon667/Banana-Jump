@@ -63,7 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camera Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\New Folder\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\HelperScripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Platform Script\PlatformScript.cs" />
     <Compile Include="Assets\Scripts\Platform Script\PlatformSpawner.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerScript.cs" />

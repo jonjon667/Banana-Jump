@@ -79,5 +79,10 @@ public class PlayerScript: MonoBehaviour
             push_count = 0;
             PlatformSpawner.instance.SpawnPlatforms();
         }
+        if(target.tag == "FallDown")
+        {
+            player_Died = true;
+            GameManager.instance.RestartGame();
+        }
     } 
 }
